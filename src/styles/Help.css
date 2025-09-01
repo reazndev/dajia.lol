@@ -1,0 +1,237 @@
+/* Help Page Styles */
+
+/* Base styles similar to About.css */
+.help-page {
+  min-height: 100vh;
+  width: 100%;
+  background: linear-gradient(135deg, #13131a 0%, #1f1f2c 100%);
+  color: var(--text-primary);
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  padding-bottom: 60px;
+}
+
+/* Re-use the glass navbar styles */
+.help-page .glass-navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 30px;
+  margin: 20px 30px;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid var(--card-border);
+  border-radius: 16px;
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.15);
+  position: relative;
+  z-index: 10;
+}
+
+.help-page .nav-left .logo {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  text-decoration: none;
+  letter-spacing: -0.5px;
+}
+
+.help-page .nav-right {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.help-page .nav-link {
+  color: var(--text-secondary);
+  text-decoration: none;
+  font-size: 0.95rem;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.help-page .nav-link:hover {
+  color: var(--text-primary);
+}
+
+.help-page .nav-link.active {
+  color: var(--text-primary);
+  font-weight: 600;
+}
+
+.help-page .signup-btn {
+  background-color: var(--accent-color);
+  color: white !important;
+  padding: 8px 16px;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.2s ease;
+}
+
+.help-page .signup-btn:hover {
+  background-color: var(--accent-hover);
+  transform: translateY(-2px);
+}
+
+/* Help content styles */
+.help-content {
+  max-width: 800px;
+  margin: 60px auto 0;
+  padding: 0 30px;
+}
+
+.help-card {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid var(--card-border);
+  border-radius: 16px;
+  padding: 40px;
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.15);
+}
+
+.help-card h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: var(--text-primary);
+}
+
+.help-intro {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: var(--text-secondary);
+  margin-bottom: 40px;
+  max-width: 700px;
+}
+
+/* FAQ section styles */
+.faq-section {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  margin-bottom: 40px;
+}
+
+.faq-item {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  padding: 24px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.faq-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+}
+
+.faq-item h3 {
+  font-size: 1.3rem;
+  margin: 0 0 12px 0;
+  color: var(--text-primary);
+}
+
+.faq-item p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--text-secondary);
+  margin: 0;
+}
+
+/* CTA section */
+.help-cta {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  margin-top: 40px;
+}
+
+.discord-button {
+  background-color: #5865F2; /* Discord color */
+  color: white;
+  text-decoration: none;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  transition: all 0.2s ease;
+}
+
+.discord-button:hover {
+  background-color: #4752c4;
+  transform: translateY(-2px);
+}
+
+.back-home {
+  color: var(--text-secondary);
+  text-decoration: none;
+  font-size: 1rem;
+  transition: color 0.2s ease;
+}
+
+.back-home:hover {
+  color: var(--text-primary);
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .help-card {
+    padding: 30px;
+  }
+  
+  .help-card h1 {
+    font-size: 2rem;
+  }
+  
+  .faq-item {
+    padding: 20px;
+  }
+  
+  .faq-item h3 {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .help-content {
+    margin-top: 40px;
+    padding: 0 15px;
+  }
+  
+  .help-card {
+    padding: 25px;
+  }
+  
+  .help-card h1 {
+    font-size: 1.8rem;
+  }
+  
+  .help-intro {
+    font-size: 1rem;
+    margin-bottom: 30px;
+  }
+  
+  .help-page .nav-link:not(.signup-btn) {
+    display: none;
+  }
+  
+  .faq-item {
+    padding: 18px;
+  }
+  
+  .faq-item h3 {
+    font-size: 1.1rem;
+    margin-bottom: 8px;
+  }
+  
+  .help-cta {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 16px;
+  }
+  
+  .discord-button, .back-home {
+    text-align: center;
+  }
+} 

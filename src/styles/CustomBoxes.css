@@ -1,0 +1,153 @@
+.custom-boxes-container {
+  margin-top: 20px;
+}
+
+.custom-box {
+  display: flex;
+  flex-direction: column;
+  color: var(--primary-text-color);
+  overflow: hidden;
+}
+
+.box-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 4px;
+}
+
+.box-header h3 {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--primary-text-color);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Discord box specific styles */
+.discord-box-content {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.discord-box-content .box-content {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-top: 4px;
+}
+
+.discord-box-content .server-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  object-fit: cover;
+}
+
+.discord-box-content .box-stats {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.discord-box-content .box-stats span {
+  font-size: 14px;
+  color: var(--secondary-text-color);
+  white-space: nowrap;
+}
+
+/* Steam box specific styles */
+.steam-box-content {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.steam-profile {
+  margin-top: 8px;
+}
+
+.steam-profile img.avatar {
+  border-radius: 10px;
+}
+
+.steam-profile .game-icon {
+  border-radius: 6px;
+}
+
+/* YouTube content styles */
+.youtube-content {
+  display: flex;
+  gap: 12px;
+  margin-top: 4px;
+  height: 100%;
+}
+
+.youtube-left {
+  flex-shrink: 0;
+}
+
+.youtube-right {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.box-stats {
+  display: flex;
+  gap: 15px;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--secondary-text-color);
+}
+
+.description {
+  font-size: 13px;
+  margin: 0;
+  color: var(--tertiary-text-color);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+}
+
+.channel-icon,
+.link-image {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+/* Loading state */
+.custom-box.loading {
+  opacity: 0.7;
+  pointer-events: none;
+}
+
+/* Error state */
+.custom-box.error {
+  border-color: rgba(239, 68, 68, 0.5);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .custom-box {
+    max-width: 100% !important;
+  }
+}
+
+.box-icon-svg {
+  color: var(--primary-text-color);
+  transition: color 0.2s ease;
+}
+
+.custom-box:hover .box-icon-svg {
+  color: var(--accent-color);
+} 

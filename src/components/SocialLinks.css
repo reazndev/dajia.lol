@@ -1,0 +1,48 @@
+.social-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin: 0 !important;
+  padding: 0 !important;
+  line-height: 1 !important;
+}
+
+.social-link {
+  transition: transform 0.2s, opacity 0.2s, filter 0.2s;
+  opacity: 0.8;
+  background: transparent !important;
+  border-radius: 0 !important;
+  padding: 0 !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.social-link:hover {
+  transform: translateY(-3px);
+  opacity: 1;
+  background: transparent !important;
+}
+
+.social-links a {
+  margin: 0 !important;
+  padding: 0 !important;
+  line-height: 1 !important;
+  background: transparent !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+}
+
+.social-link svg {
+  width: 24px;
+  height: 24px;
+}
+
+/* Add glow effect styles */
+.social-link.glow {
+  filter: drop-shadow(0 0 var(--glow-strength) var(--glow-color));
+}
+
+.social-link.glow:hover {
+  filter: drop-shadow(0 0 calc(var(--glow-strength) * 1.5) var(--glow-color));
+} 

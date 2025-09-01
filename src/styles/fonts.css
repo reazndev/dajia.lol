@@ -1,0 +1,165 @@
+/* Sans-serif fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
+
+/* Serif fonts */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&display=swap');
+
+/* Handwritten fonts */
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
+/* Display fonts */
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Titan+One&display=swap');
+
+/* Gothic fonts */
+@import url('https://fonts.googleapis.com/css2?family=UnifrakturMaguntia&display=swap');
+
+/* Tech fonts */
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700&display=swap');
+
+/* Monospace fonts */
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600;700&display=swap');
+
+/* Creative fonts */
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Metal+Mania&display=swap');
+
+:root {
+  /* Sans Serif */
+  --font-primary: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-poppins: 'Poppins', sans-serif;
+  --font-montserrat: 'Montserrat', sans-serif;
+  
+  /* Serif */
+  --font-playfair-display: 'Playfair Display', serif;
+  --font-merriweather: 'Merriweather', serif;
+  --font-lora: 'Lora', serif;
+  
+  /* Handwritten */
+  --font-dancing-script: 'Dancing Script', cursive;
+  --font-caveat: 'Caveat', cursive;
+  --font-pacifico: 'Pacifico', cursive;
+  
+  /* Display */
+  --font-bebas-neue: 'Bebas Neue', sans-serif;
+  --font-righteous: 'Righteous', sans-serif;
+  --font-abril-fatface: 'Abril Fatface', cursive;
+  --font-titan-one: 'Titan One', cursive;
+  
+  /* Gothic */
+  --font-unifraktur: 'UnifrakturMaguntia', cursive;
+  
+  /* Tech */
+  --font-orbitron: 'Orbitron', sans-serif;
+  
+  /* Monospace */
+  --font-jetbrains-mono: 'JetBrains Mono', monospace;
+  --font-fira-code: 'Fira Code', monospace;
+  
+  /* Creative */
+  --font-comfortaa: 'Comfortaa', sans-serif;
+  --font-metal-mania: 'Metal Mania', cursive;
+
+  /* Default font family */
+  --font-family: var(--font-primary);
+}
+
+/* Preview in Settings */
+
+/* Sans-serif */
+.font-inter { font-family: var(--font-primary) !important; }
+.font-poppins { font-family: var(--font-poppins) !important; }
+.font-montserrat { font-family: var(--font-montserrat) !important; }
+
+/* Serif */
+.font-playfair { font-family: var(--font-playfair-display) !important; }
+.font-merriweather { font-family: var(--font-merriweather) !important; }
+.font-lora { font-family: var(--font-lora) !important; }
+
+/* Handwritten */
+.font-dancing-script { font-family: var(--font-dancing-script) !important; }
+.font-caveat { font-family: var(--font-caveat) !important; }
+.font-pacifico { font-family: var(--font-pacifico) !important; }
+
+/* Display */
+.font-bebas-neue { font-family: var(--font-bebas-neue) !important; }
+.font-righteous { font-family: var(--font-righteous) !important; }
+.font-abril-fatface { font-family: var(--font-abril-fatface) !important; }
+.font-titan-one { font-family: var(--font-titan-one) !important; }
+
+/* Gothic */
+.font-unifraktur { font-family: var(--font-unifraktur) !important; }
+
+/* Tech */
+.font-orbitron { font-family: var(--font-orbitron) !important; }
+
+/* Monospace */
+.font-jetbrains { font-family: var(--font-jetbrains-mono) !important; }
+.font-fira-code { font-family: var(--font-fira-code) !important; }
+
+/* Creative */
+.font-comfortaa { font-family: var(--font-comfortaa) !important; }
+.font-metal-mania { font-family: var(--font-metal-mania) !important; }
+
+/* Font application using data attributes */
+[data-font="Inter"] { font-family: var(--font-primary) !important; }
+[data-font="Poppins"] { font-family: var(--font-poppins) !important; }
+[data-font="Montserrat"] { font-family: var(--font-montserrat) !important; }
+[data-font="Playfair Display"] { font-family: var(--font-playfair-display) !important; }
+[data-font="Merriweather"] { font-family: var(--font-merriweather) !important; }
+[data-font="Lora"] { font-family: var(--font-lora) !important; }
+[data-font="Dancing Script"] { font-family: var(--font-dancing-script) !important; }
+[data-font="Caveat"] { font-family: var(--font-caveat) !important; }
+[data-font="Pacifico"] { font-family: var(--font-pacifico) !important; }
+[data-font="Bebas Neue"] { font-family: var(--font-bebas-neue) !important; }
+[data-font="Righteous"] { font-family: var(--font-righteous) !important; }
+[data-font="Abril Fatface"] { font-family: var(--font-abril-fatface) !important; }
+[data-font="Titan One"] { font-family: var(--font-titan-one) !important; }
+[data-font="UnifrakturMaguntia"] { font-family: var(--font-unifraktur) !important; }
+[data-font="Orbitron"] { font-family: var(--font-orbitron) !important; }
+[data-font="JetBrains Mono"] { font-family: var(--font-jetbrains-mono) !important; }
+[data-font="Fira Code"] { font-family: var(--font-fira-code) !important; }
+[data-font="Comfortaa"] { font-family: var(--font-comfortaa) !important; }
+[data-font="Metal Mania"] { font-family: var(--font-metal-mania) !important; }
+
+/* Global Font Settings */
+html, body {
+  font-family: var(--font-family);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.profile-page[data-font] * {
+  font-family: inherit !important;
+}
+
+/* Profile specific styles */
+.profile-page {
+  font-family: inherit;
+}
+
+/* Ensure all text elements use the inherited font */
+.profile-page h1,
+.profile-page h2,
+.profile-page h3,
+.profile-page h4,
+.profile-page h5,
+.profile-page h6,
+.profile-page p,
+.profile-page span,
+.profile-page div,
+.profile-page a,
+.profile-page button,
+.profile-page input,
+.profile-page textarea {
+  font-family: inherit !important;
+} 

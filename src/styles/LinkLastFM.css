@@ -1,0 +1,147 @@
+.link-lastfm-container {
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 20px;
+  text-align: center;
+  font-family: 'Inter', sans-serif !important;
+}
+
+.link-lastfm-container h1 {
+  margin-bottom: 30px;
+  color: #fff;
+}
+
+.link-lastfm-container h2 {
+  margin-bottom: 20px;
+  color: #fff;
+  font-size: 1.5em;
+}
+
+.error-message {
+  color: #ff4444;
+  margin: 20px 0;
+  padding: 10px;
+  border-radius: 4px;
+  background-color: rgba(255, 68, 68, 0.1);
+}
+
+.connection-sections {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.lastfm-connect-section,
+.discord-connect-section {
+  background: rgba(31, 31, 44, 0.7);
+  padding: 30px;
+  border-radius: 12px;
+  margin-bottom: 20px;
+}
+
+.connection-status {
+  padding: 15px;
+  border-radius: 8px;
+  margin: 20px 0;
+}
+
+.connection-status.success {
+  background-color: rgba(46, 204, 113, 0.1);
+  color: #2ecc71;
+}
+
+.connection-status p {
+  margin: 0;
+  font-weight: 500;
+}
+
+.lastfm-connect-button,
+.discord-connect-button,
+.continue-button {
+  padding: 12px 24px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 20px;
+}
+
+.lastfm-connect-button {
+  background-color: #d51007;
+  color: white;
+}
+
+.lastfm-connect-button:hover {
+  background-color: #b30d06;
+}
+
+.discord-connect-button {
+  background-color: #5865F2;
+  color: white;
+}
+
+.discord-connect-button:hover {
+  background-color: #4752C4;
+}
+
+.continue-button {
+  background-color: #2ecc71;
+  color: white;
+}
+
+.continue-button:hover {
+  background-color: #27ae60;
+}
+
+.lastfm-connect-button:disabled,
+.discord-connect-button:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.connection-complete {
+  background: rgba(46, 204, 113, 0.1);
+  padding: 30px;
+  border-radius: 12px;
+  margin-top: 20px;
+}
+
+.connection-complete p {
+  color: #2ecc71;
+  font-size: 1.2em;
+  margin-bottom: 20px;
+}
+
+.skip-section {
+  margin-top: 40px;
+  padding: 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.skip-text {
+  color: #9ca3af;
+  margin-bottom: 15px;
+}
+
+.skip-button {
+  padding: 10px 20px;
+  background-color: transparent;
+  border: 1px solid #4b5563;
+  color: #9ca3af;
+  border-radius: 8px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.skip-button:hover {
+  background-color: rgba(75, 85, 99, 0.2);
+  border-color: #6b7280;
+  color: #d1d5db;
+} 

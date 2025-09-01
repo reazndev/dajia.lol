@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dajia.lol Profile Demo</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      color: white;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+    .profile-container {
+      width: 100%;
+      max-width: 500px;
+      background: rgba(30, 30, 46, 0.7);
+      backdrop-filter: blur(10px);
+      border-radius: 16px;
+      padding: 30px;
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+      margin: 0 auto;
+    }
+    .profile-header {
+      display: flex;
+      align-items: center;
+      margin-bottom: 24px;
+    }
+    .profile-avatar {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      background: linear-gradient(45deg, #8b5cf6, #ec4899);
+      margin-right: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2rem;
+      font-weight: bold;
+    }
+    .profile-info h1 {
+      margin: 0 0 4px 0;
+      font-size: 24px;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+    }
+    .profile-info p {
+      margin: 0;
+      color: #a0aec0;
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 1.5;
+    }
+    .scrobble-count {
+      font-size: 12px;
+      color: #a0aec0;
+      margin-top: 6px;
+      font-weight: 500;
+    }
+    .social-links {
+      display: flex;
+      gap: 12px;
+      margin-top: 12px;
+    }
+    .social-icon {
+      width: 20px;
+      height: 20px;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 4px;
+    }
+    .section-title {
+      font-size: 18px;
+      margin: 20px 0 12px;
+      font-weight: 600;
+    }
+    .track-list {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .track-item {
+      display: flex;
+      align-items: center;
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: 8px;
+      padding: 8px;
+    }
+    .track-number {
+      width: 24px;
+      height: 24px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 12px;
+      margin-right: 12px;
+      color: #a0aec0;
+      font-weight: 500;
+    }
+    .track-art {
+      width: 40px;
+      height: 40px;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 4px;
+      margin-right: 12px;
+    }
+    .track-info h3 {
+      margin: 0;
+      font-size: 14px;
+      font-weight: 600;
+    }
+    .track-info p {
+      margin: 2px 0 0 0;
+      font-size: 12px;
+      color: #a0aec0;
+      font-weight: 400;
+    }
+  </style>
+</head>
+<body>
+  <div class="profile-container">
+    <div class="profile-header">
+      <div class="profile-avatar">999</div>
+      <div class="profile-info">
+        <h1>999</h1>
+        <p>This is the test account used in the development process of dajia.lol</p>
+        <div class="scrobble-count">Scrobbles: 17,053</div>
+        <div class="social-links">
+          <div class="social-icon"></div>
+          <div class="social-icon"></div>
+          <div class="social-icon"></div>
+          <div class="social-icon"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="section-title">Recently Played</div>
+    <div class="track-list">
+      <div class="track-item">
+        <div class="track-number">1</div>
+        <div class="track-art"></div>
+        <div class="track-info">
+          <h3>スカイクラッド</h3>
+          <p>Kanako Itō</p>
+        </div>
+      </div>
+      <div class="track-item">
+        <div class="track-number">2</div>
+        <div class="track-art"></div>
+        <div class="track-info">
+          <h3>Floating Dream (Was It True)</h3>
+          <p>Denpa Ika & KIVA</p>
+        </div>
+      </div>
+      <div class="track-item">
+        <div class="track-number">3</div>
+        <div class="track-art"></div>
+        <div class="track-info">
+          <h3>Take time</h3>
+          <p>Yoasobi</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html> 

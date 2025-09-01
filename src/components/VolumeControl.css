@@ -1,0 +1,98 @@
+.volume-control {
+  font-family: inherit;
+}
+
+.volume-control input[type="range"] {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  height: 3px;
+  border-radius: 3px;
+  outline: none;
+  cursor: pointer;
+  background: rgba(255, 255, 255, 0.1);
+  position: relative;
+  margin: 0;
+  padding: 0;
+}
+
+/* Remove the track styling since we're using the input background directly */
+.volume-control input[type="range"]::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 3px;
+  border: none;
+}
+
+.volume-control input[type="range"]::-moz-range-track {
+  width: 100%;
+  height: 3px;
+  border: none;
+}
+
+.volume-control input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--accent-color, #8b5cf6);
+  cursor: pointer;
+  border: none;
+  margin-top: -4.5px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+  transition: all 0.2s ease;
+  position: relative;
+  z-index: 2;
+}
+
+.volume-control input[type="range"]::-moz-range-thumb {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--accent-color, #8b5cf6);
+  cursor: pointer;
+  border: none;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+  transition: all 0.2s ease;
+  position: relative;
+  z-index: 2;
+}
+
+.volume-control input[type="range"]::-webkit-slider-thumb:hover {
+  transform: scale(1.2);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+}
+
+.volume-control input[type="range"]::-moz-range-thumb:hover {
+  transform: scale(1.2);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+}
+
+.volume-control button:hover {
+  opacity: 0.8;
+}
+
+.volume-control button:active {
+  transform: scale(0.95);
+}
+
+/* Progress bar styling */
+.volume-slider-container {
+  position: relative;
+  padding: 0 6px;
+}
+
+.volume-slider-container::before {
+  content: '';
+  position: absolute;
+  left: 6px;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 3px;
+  /* Calculate width accounting for the thumb width */
+  width: calc((100% - 12px) * var(--volume-percent-decimal));
+  background: var(--accent-color, #8b5cf6);
+  border-radius: 3px;
+  pointer-events: none;
+  z-index: 1;
+}

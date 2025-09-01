@@ -1,0 +1,1777 @@
+/* Import fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700&display=swap');
+
+/* General Styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  cursor: inherit;
+}
+
+:root {
+  --background: #1a202c;
+  --card-bg: #2d3748;
+  --text-primary: #ffffff;
+  --text-secondary: #a0aec0;
+  --accent: #8b5cf6;
+  --accent-hover: #7c3aed;
+  --card-border: rgba(255, 255, 255, 0.1);
+  --background-card-opacity: 0.7;
+  --content-card-opacity: 0.7;
+  --primary-text-color: var(--text-primary);
+  --secondary-text-color: var(--text-secondary);
+  --tertiary-text-color: #72767d;
+}
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  line-height: 1.6;
+  color: var(--text-primary);
+  background-color: var(--background);
+  min-height: 100vh;
+  background: linear-gradient(135deg, #13131a 0%, #1f1f2c 100%);
+}
+
+.App {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+h1, h2, h3 {
+  margin-bottom: 20px;
+  color: var(--text-primary);
+}
+
+a {
+  color: var(--accent);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+a:hover {
+  color: var(--accent-hover);
+}
+
+/* Frosted Glass Card Style */
+.glass-card {
+  background: rgba(45, 55, 72, var(--content-card-opacity));
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid var(--card-border);
+  border-radius: 16px;
+  padding: 24px;
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.2);
+  font-family: inherit;
+}
+
+.glass-card * {
+  font-family: inherit;
+}
+
+.form-group {
+  margin-bottom: 24px;
+}
+
+label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 500;
+  color: var(--text-secondary);
+}
+
+input {
+  width: 100%;
+  padding: 12px 16px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--card-border);
+  border-radius: 8px;
+  font-size: 16px;
+  color: var(--text-primary);
+  transition: all 0.2s;
+}
+
+input:focus {
+  outline: none;
+  border-color: var(--accent);
+  background: rgba(255, 255, 255, 0.1);
+}
+
+button {
+  background-color: var(--accent);
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 500;
+  transition: background-color 0.2s;
+}
+
+button:hover {
+  background-color: var(--accent-hover);
+}
+
+button:disabled {
+  background-color: rgba(139, 92, 246, 0.5);
+  cursor: not-allowed;
+}
+
+.error-message {
+  color: #ef4444;
+  margin-bottom: 20px;
+  padding: 12px;
+  background: rgba(239, 68, 68, 0.1);
+  border-radius: 8px;
+  border: 1px solid rgba(239, 68, 68, 0.2);
+}
+
+.auth-container, .link-lastfm-container {
+  max-width: 500px;
+  margin: 50px auto;
+  background: var(--card-bg);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid var(--card-border);
+  border-radius: 16px;
+  padding: 24px;
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.2);
+}
+
+.auth-container h1, .link-lastfm-container h1 {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 2rem;
+}
+
+.auth-container p, .link-lastfm-container p {
+  text-align: center;
+  margin-top: 20px;
+  color: var(--text-secondary);
+}
+
+.home-container {
+  text-align: center;
+  padding: 80px 20px;
+}
+
+.home-container h1 {
+  font-size: 3.5rem;
+  margin-bottom: 20px;
+  background: linear-gradient(to right, var(--text-primary), var(--accent));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.home-container p {
+  font-size: 1.2rem;
+  max-width: 600px;
+  margin: 0 auto 40px;
+  color: var(--text-secondary);
+}
+
+.cta-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.btn {
+  padding: 14px 32px;
+  border-radius: 8px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.2s;
+}
+
+.btn-primary {
+  background-color: var(--accent);
+  color: white;
+}
+
+.btn-secondary {
+  background-color: rgba(139, 92, 246, 0.5);
+  color: white;
+  padding: 8px 16px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.btn-secondary:hover {
+  background-color: rgba(139, 92, 246, 0.7);
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 16px rgba(139, 92, 246, 0.2);
+}
+
+/* Profile Page */
+.profile-page {
+  min-height: 100vh;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.profile-page * {
+  font-family: inherit;
+}
+
+.profile-overlay {
+  min-height: 100vh;
+  width: 100%;
+  padding: 40px 20px 20px;
+  position: relative;
+  overflow-y: auto;
+}
+
+.profile-container {
+  max-width: 800px;
+  margin: 0 auto 20px;
+  position: relative;
+}
+
+.profile-card {
+  background: rgba(45, 55, 72, var(--content-card-opacity));  
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid var(--card-border);
+  border-radius: 16px;
+  padding: 24px;
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.2);
+}
+
+.user-info {
+  display: flex;
+  align-items: center;
+  margin-bottom: 40px;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 12px;
+}
+
+.avatar {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 24px;
+}
+
+.user-stats {
+  flex: 1;
+}
+
+.user-stats h1 {
+  color: var(--primary-text-color) !important;
+}
+
+.user-stats p {
+  color: var(--secondary-text-color) !important;
+}
+
+.music-section {
+  margin-bottom: 20px;
+}
+
+.music-section h2 {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  color: var(--text-primary);
+}
+
+/* Update track list to be scrollable */
+.track-list {
+  list-style: none;
+  padding-right: 8px;
+  margin-bottom: 16px;
+  display: block;
+}
+
+/* Custom scrollbar for webkit browsers */
+.track-list::-webkit-scrollbar {
+  width: 6px;
+}
+
+.track-list::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 10px;
+}
+
+.track-list::-webkit-scrollbar-thumb {
+  background-color: var(--accent);
+  border-radius: 10px;
+}
+
+/* Make track items smaller */
+.track-item {
+  display: flex;
+  align-items: center;
+  padding: 12px;
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 8px;
+  transition: transform 0.2s;
+  margin-bottom: 8px; /* Add margin to separate items */
+}
+
+.track-image {
+  width: 48px;
+  height: 48px;
+  border-radius: 6px;
+  margin-right: 12px;
+  object-fit: cover;
+}
+
+.track-name {
+  font-size: 0.95rem;
+  font-weight: 600;
+  margin-bottom: 2px;
+  color: var(--primary-text-color) !important;
+}
+
+.artist-name {
+  font-size: 0.85rem;
+  color: var(--secondary-text-color) !important;
+}
+
+.now-playing {
+  display: inline-block;
+  background-color: var(--accent);
+  color: white;
+  padding: 2px 8px;
+  border-radius: 12px;
+  font-size: 10px;
+  margin-top: 4px;
+}
+
+.no-lastfm-data {
+  text-align: center;
+  padding: 40px;
+  color: var(--text-secondary);
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.profile-card, .auth-container, .link-lastfm-container {
+  animation: fadeIn 0.3s ease-out;
+}
+
+/* Settings Page */
+.settings-container {
+  max-width: 900px;
+  margin: 50px auto;
+}
+
+.settings-grid {
+  display: grid;
+  gap: 32px;
+  margin-bottom: 32px;
+}
+
+.settings-section {
+  margin-bottom: 32px;
+}
+
+.settings-section h2 {
+  font-size: 1.25rem;
+  margin-bottom: 16px;
+  color: var(--text-primary);
+}
+
+.image-upload-preview {
+  position: relative;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 12px;
+  padding: 16px;
+  text-align: center;
+}
+
+.preview-image {
+  max-width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 16px;
+}
+
+.preview-image.background {
+  width: 100%;
+  max-width: 100%;
+  height: 120px;
+}
+
+.file-input {
+  display: block;
+  width: 100%;
+  padding: 8px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 8px;
+  cursor: pointer;
+  color: var(--text-secondary);
+}
+
+textarea {
+  width: 100%;
+  min-height: 120px;
+  padding: 12px 16px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--card-border);
+  border-radius: 8px;
+  font-size: 16px;
+  color: var(--text-primary);
+  resize: vertical;
+  transition: all 0.2s;
+}
+
+textarea:focus {
+  outline: none;
+  border-color: var(--accent);
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.char-count {
+  text-align: right;
+  color: var(--text-secondary);
+  font-size: 0.875rem;
+  margin-top: 4px;
+}
+
+.color-picker {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.color-picker input[type="color"] {
+  width: 60px;
+  height: 40px;
+  padding: 0;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.settings-actions {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 32px;
+}
+
+.success-message {
+  color: #10B981;
+  margin-bottom: 20px;
+  padding: 12px;
+  background: rgba(16, 185, 129, 0.1);
+  border-radius: 8px;
+  border: 1px solid rgba(16, 185, 129, 0.2);
+}
+
+/* Public Profile Page */
+/* Update existing profile styles */
+.profile-card {
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.user-info {
+  border-color: var(--accent-color);
+}
+
+.avatar {
+  border-color: var(--accent-color);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .user-info {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .avatar {
+    margin: 0 auto 20px;
+  }
+}
+
+/* Settings Button */
+.settings-button {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  width: 48px;
+  height: 48px;
+  background: var(--card-bg);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid var(--card-border);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-primary);
+  transition: all 0.2s ease;
+  z-index: 100;
+}
+
+.settings-button:hover {
+  transform: rotate(45deg);
+  background: var(--accent);
+  color: white;
+  border-color: var(--accent);
+  box-shadow: 0 0 20px rgba(139, 92, 246, 0.3);
+}
+
+.settings-icon {
+  width: 24px;
+  height: 24px;
+}
+
+/* Make sure the settings button is visible on mobile */
+@media (max-width: 768px) {
+  .settings-button {
+    top: 12px;
+    right: 12px;
+    width: 40px;
+    height: 40px;
+  }
+
+  .settings-icon {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+/* Add hover effect back */
+.track-item:hover {
+  transform: translateY(-2px);
+  background: rgba(255, 255, 255, 0.05);
+}
+
+/* Make sure track info takes up available space */
+.track-info {
+  flex: 1;
+}
+
+/* Module Selector */
+.module-selector {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+.module-selector button {
+  background: rgba(255, 255, 255, 0.05);
+  color: var(--text-secondary);
+  border: 1px solid var(--card-border);
+  padding: 10px 16px;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.module-selector button:hover {
+  background: rgba(255, 255, 255, 0.1);
+  transform: translateY(-2px);
+}
+
+.module-selector button.active {
+  background: rgba(59, 61, 66, 0.5);
+  color: white;
+  border-color: transparent;
+}
+
+/* Time Period Selector - smaller version of module selector buttons */
+.time-period-selector {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 12px;
+  flex-wrap: wrap;
+}
+
+.time-period-selector button {
+  background: rgba(255, 255, 255, 0.05);
+  color: var(--text-secondary);
+  border: 1px solid var(--card-border);
+  padding: 6px 12px;
+  border-radius: 16px;
+  font-size: 12px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.time-period-selector button:hover {
+  background: rgba(255, 255, 255, 0.1);
+  transform: translateY(-2px);
+}
+
+.time-period-selector button.active {
+  background: var(--accent);
+  color: white;
+  border-color: var(--accent);
+}
+
+/* Artist and Album Lists */
+.artist-list, .album-list {
+  list-style: none;
+  padding-right: 8px;
+  display: block;
+}
+
+.artist-list::-webkit-scrollbar,
+.album-list::-webkit-scrollbar {
+  width: 6px;
+}
+
+.artist-list::-webkit-scrollbar-track,
+.album-list::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 10px;
+}
+
+.artist-list::-webkit-scrollbar-thumb,
+.album-list::-webkit-scrollbar-thumb {
+  background-color: var(--accent);
+  border-radius: 10px;
+}
+
+.artist-item, .album-item {
+  display: flex;
+  align-items: center;
+  padding: 8px 10px;
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 6px;
+  transition: transform 0.2s, background-color 0.2s;
+  margin-bottom: 4px;
+}
+
+.artist-item:hover, .album-item:hover {
+  transform: translateY(-2px);
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.artist-image, .album-image {
+  width: 48px;
+  height: 48px;
+  border-radius: 4px;
+  object-fit: cover;
+  margin-right: 12px;
+}
+
+.album-image {
+  width: 60px;
+  height: 60px;
+}
+
+.artist-info, .album-info {
+  flex: 1;
+}
+
+.artist-name, .album-name {
+  font-weight: 600;
+  font-size: 14px;
+  margin-bottom: 2px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 100%;
+}
+
+.album-artist {
+  font-size: 12px;
+  margin-bottom: 2px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 100%;
+}
+
+.play-count {
+  font-size: 11px;
+  color: var(--tertiary-text-color) !important;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .module-selector, .time-period-selector {
+    justify-content: flex-start;
+    padding: 0 10px;
+    margin: 0;
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* IE and Edge */
+  }
+
+  .module-selector::-webkit-scrollbar,
+  .time-period-selector::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Opera */
+  }
+  
+  .module-selector button {
+    font-size: 12px;
+    padding: 6px 12px;
+    white-space: nowrap;
+    flex-shrink: 0;
+    margin-right: 8px;
+  }
+  
+  .time-period-selector button {
+    font-size: 11px;
+    padding: 4px 8px;
+    white-space: nowrap;
+    flex-shrink: 0;
+    margin-right: 8px;
+  }
+
+  .module-selector button:last-child,
+  .time-period-selector button:last-child {
+    margin-right: 0;
+  }
+}
+
+/* Module loading indicator */
+.module-loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 8px;
+  animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+  0% { opacity: 0.6; }
+  50% { opacity: 1; }
+  100% { opacity: 0.6; }
+}
+
+/* Background loading indicator */
+.background-loading {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  background: rgba(0, 0, 0, 0.7);
+  color: white;
+  padding: 8px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  z-index: 100;
+  animation: pulse 1.5s infinite;
+}
+
+/* Rank number styling */
+.rank-number {
+  min-width: 20px;
+  width: 20px;
+  height: 20px;
+  font-size: 10px;
+  margin-right: 8px;
+  text-align: center;
+}
+
+/* Top 3 items get special styling for all types */
+.artist-item:nth-child(-n+3) .rank-number,
+.album-item:nth-child(-n+3) .rank-number,
+.track-item:nth-child(-n+3) .rank-number {
+  min-width: 24px;
+  width: 24px;
+  height: 24px;
+  font-size: 12px;
+}
+
+/* First place gets extra special styling for all types */
+.artist-item:first-child .rank-number,
+.album-item:first-child .rank-number,
+.track-item:first-child .rank-number {
+  min-width: 28px;
+  width: 28px;
+  height: 28px;
+  font-size: 14px;
+}
+
+/* Social Links */
+.social-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 16px;
+}
+
+.social-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.1);
+  transition: all 0.2s;
+}
+
+.social-link:hover {
+  transform: translateY(-3px);
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.social-icon {
+  width: 24px;
+  height: 24px;
+}
+
+/* For profile settings page */
+.social-links-settings {
+  margin-top: 24px;
+}
+
+.social-links-settings h3 {
+  margin-bottom: 16px;
+  font-size: 1.2rem;
+}
+
+.social-link-input {
+  display: flex;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.social-link-input label {
+  min-width: 120px;
+  margin-bottom: 0;
+}
+
+.social-link-input input {
+  flex: 1;
+}
+
+.icon-color-picker {
+  margin-top: 16px;
+}
+
+.icon-color-picker label {
+  display: block;
+  margin-bottom: 8px;
+}
+
+.color-options {
+  display: flex;
+  gap: 8px;
+}
+
+.color-option {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  cursor: pointer;
+  border: 2px solid transparent;
+}
+
+.color-option.selected {
+  border-color: var(--accent);
+}
+
+/* Bio editor with markdown support */
+.bio-editor {
+  border: 1px solid var(--card-border);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.bio-tabs {
+  display: flex;
+  border-bottom: 1px solid var(--card-border);
+}
+
+.bio-tabs button {
+  flex: 1;
+  background: transparent;
+  color: var(--text-secondary);
+  padding: 8px;
+  border: none;
+  border-radius: 0;
+}
+
+.bio-tabs button:hover {
+  background: rgba(255, 255, 255, 0.05);
+  transform: none;
+}
+
+.bio-tabs button.active {
+  background: rgba(139, 92, 246, 0.1);
+  color: var(--accent);
+  font-weight: 500;
+}
+
+.bio-editor textarea {
+  width: 100%;
+  padding: 12px 16px;
+  background: rgba(255, 255, 255, 0.05);
+  border: none;
+  font-size: 16px;
+  color: var(--text-primary);
+  resize: vertical;
+  min-height: 120px;
+}
+
+.bio-editor textarea:focus {
+  outline: none;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.bio-preview {
+  padding: 12px 16px;
+  min-height: 120px;
+  background: rgba(255, 255, 255, 0.05);
+}
+
+/* Markdown content styling */
+.markdown-content h1,
+.markdown-content h2,
+.markdown-content h3,
+.markdown-content h4,
+.markdown-content h5,
+.markdown-content h6 {
+  margin-top: 1em;
+  margin-bottom: 0.5em;
+}
+
+.markdown-content p {
+  margin-bottom: 1em;
+}
+
+.markdown-content a {
+  color: var(--accent);
+  text-decoration: underline;
+}
+
+.markdown-content ul,
+.markdown-content ol {
+  margin-left: 1.5em;
+  margin-bottom: 1em;
+}
+
+.markdown-content code {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 0.2em 0.4em;
+  border-radius: 3px;
+  font-family: monospace;
+}
+
+.markdown-content pre {
+  background: rgba(0, 0, 0, 0.2);
+  padding: 1em;
+  border-radius: 8px;
+  overflow-x: auto;
+  margin-bottom: 1em;
+}
+
+.markdown-content blockquote {
+  border-left: 3px solid var(--accent);
+  padding-left: 1em;
+  margin-left: 0;
+  margin-bottom: 1em;
+  color: var(--text-secondary);
+}
+
+/* Social links preview */
+.social-links-preview {
+  margin-bottom: 20px;
+  padding: 16px;
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 8px;
+}
+
+.social-links-preview label {
+  display: block;
+  margin-bottom: 8px;
+  color: var(--text-secondary);
+}
+
+/* Profile Settings Page Styles */
+.profile-settings-page {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.settings-container {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.settings-section {
+  background: var(--card-bg);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid var(--card-border);
+  border-radius: 16px;
+  padding: 24px;
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.2);
+}
+
+.settings-section h2 {
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--card-border);
+  color: var(--text-primary);
+}
+
+/* Social Links Section */
+.social-links-section {
+  margin-top: 30px;
+}
+
+.social-links-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.social-link-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.social-link-item label {
+  margin-bottom: 5px;
+}
+
+/* Icon color picker */
+.icon-color-options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.icon-color-option {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  cursor: pointer;
+  border: 2px solid transparent;
+  transition: transform 0.2s, border-color 0.2s;
+}
+
+.icon-color-option:hover {
+  transform: scale(1.1);
+}
+
+.icon-color-option.selected {
+  border-color: white;
+  box-shadow: 0 0 0 2px var(--accent);
+}
+
+/* Save button */
+.save-button {
+  background: var(--accent);
+  color: white;
+  font-weight: 600;
+  padding: 12px 24px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.2s, transform 0.1s;
+  margin-top: 20px;
+  align-self: flex-end;
+}
+
+.save-button:hover {
+  background: var(--accent-hover);
+  transform: translateY(-2px);
+}
+
+.save-button:disabled {
+  background: #666;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* Smaller list items for top tracks, albums, and artists */
+.artist-list, .album-list, .track-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 12px;
+  padding-right: 8px;
+}
+
+.artist-item, .album-item, .track-item {
+  display: flex;
+  align-items: center;
+  padding: 8px 10px;
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 6px;
+  transition: transform 0.2s, background-color 0.2s;
+  margin-bottom: 4px;
+  height: 64px; /* Fixed height for all items */
+  box-sizing: border-box; /* Ensure padding is included in height */
+}
+
+.artist-item:hover, .album-item:hover, .track-item:hover {
+  background: rgba(255, 255, 255, 0.06);
+  transform: translateY(-2px);
+}
+
+.artist-image, .album-image, .track-image {
+  width: 48px;
+  height: 48px;
+  min-width: 48px; /* Prevent image from shrinking */
+  border-radius: 4px;
+  object-fit: cover;
+  margin-right: 12px;
+}
+
+.artist-info, .album-info, .track-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%; /* Fill the parent height */
+  overflow: hidden; /* Prevent overflow */
+}
+
+.artist-name, .album-name, .track-name {
+  font-weight: 600;
+  font-size: 14px;
+  margin-bottom: 2px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 100%;
+}
+
+.album-artist, .track-artist {
+  font-size: 12px;
+  margin-bottom: 2px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 100%;
+}
+
+.play-count {
+  font-size: 11px;
+  color: var(--tertiary-text-color) !important;
+}
+
+/* Make the module content more compact */
+.module-content {
+  padding: 12px 0 0;
+  max-height: 500px;
+  overflow-y: auto;
+  margin-bottom: 10px;
+}
+
+/* Style the scrollbar for better appearance */
+.module-content::-webkit-scrollbar,
+div[style*="overflow-y: auto"]::-webkit-scrollbar {
+  width: 6px;
+}
+
+.module-content::-webkit-scrollbar-track,
+div[style*="overflow-y: auto"]::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 10px;
+}
+
+.module-content::-webkit-scrollbar-thumb,
+div[style*="overflow-y: auto"]::-webkit-scrollbar-thumb {
+  background: var(--scrollbar-color, rgba(255, 255, 255, 0.2));
+  border-radius: 10px;
+}
+
+.module-content::-webkit-scrollbar-thumb:hover,
+div[style*="overflow-y: auto"]::-webkit-scrollbar-thumb:hover {
+  background: var(--scrollbar-color, rgba(255, 255, 255, 0.3));
+}
+
+/* Loading and error states */
+.loading-spinner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+  color: var(--text-secondary);
+}
+
+.loading-spinner::after {
+  content: "";
+  width: 30px;
+  height: 30px;
+  border: 3px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  border-top-color: var(--accent);
+  animation: spin 1s ease-in-out infinite;
+  margin-left: 10px;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+.error-container {
+  padding: 20px;
+  background: rgba(239, 68, 68, 0.1);
+  border: 1px solid rgba(239, 68, 68, 0.3);
+  border-radius: 8px;
+  color: #ef4444;
+  margin: 20px 0;
+}
+
+.no-data {
+  text-align: center;
+  padding: 30px;
+  color: var(--text-secondary);
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 8px;
+}
+
+/* Ensure text elements don't cause container to grow */
+.artist-name, .album-name, .track-name,
+.album-artist, .track-artist,
+.play-count, .play-time, .now-playing {
+  margin: 0;
+  padding: 0;
+  line-height: 1.4;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Specific margins between text elements */
+.artist-name, .album-name, .track-name {
+  margin-bottom: 2px;
+}
+
+.album-artist, .track-artist {
+  margin-bottom: 2px;
+}
+
+/* Ensure track-specific elements don't affect height */
+.now-playing {
+  font-size: 11px;
+  color: var(--accent);
+}
+
+.play-time {
+  font-size: 11px;
+  color: var(--text-secondary);
+}
+
+/* Ensure all list items have consistent height and spacing */
+.artist-list, .album-list, .track-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 12px;
+  padding-right: 8px;
+}
+
+/* Make all items the same exact height */
+.artist-item, .album-item, .track-item {
+  display: flex;
+  align-items: center;
+  padding: 8px 10px;
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 6px;
+  transition: transform 0.2s, background-color 0.2s;
+  margin-bottom: 4px;
+  height: 64px; /* Fixed height */
+  min-height: 64px; /* Ensure minimum height */
+  max-height: 64px; /* Ensure maximum height */
+  box-sizing: border-box;
+  overflow: hidden; /* Prevent content from expanding the container */
+}
+
+/* Ensure all info containers have the same structure */
+.artist-info, .album-info, .track-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+  overflow: hidden;
+  padding: 0; /* Remove any padding */
+  margin: 0; /* Remove any margin */
+}
+
+/* Ensure all text elements have the same line height and spacing */
+.artist-name, .album-name, .track-name,
+.album-artist, .track-artist,
+.play-count, .play-time, .now-playing {
+  margin: 0;
+  padding: 0;
+  line-height: 1.2; /* Consistent line height */
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Add specific debug styles to identify any issues */
+.track-item {
+  border-left: 2px solid transparent; /* Visual indicator for debugging */
+}
+
+/* Add media query for responsive height */
+@media (max-height: 800px) {
+  .module-content {
+    max-height: 400px;
+  }
+}
+
+@media (max-height: 600px) {
+  .module-content {
+    max-height: 300px;
+  }
+}
+
+/* Profile Links Section */
+.links-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 16px;
+  margin-top: 16px;
+}
+
+.link-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.link-item label {
+  margin-bottom: 6px;
+  font-weight: 500;
+}
+
+.link-item input {
+  padding: 10px 12px;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--card-border);
+  color: var(--text-primary);
+  transition: all 0.2s;
+}
+
+.link-item input:focus {
+  outline: none;
+  border-color: var(--accent);
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.section-description {
+  color: var(--text-secondary);
+  margin-bottom: 16px;
+  font-size: 14px;
+}
+
+/* Profile Links Display */
+.profile-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 16px;
+}
+
+.profile-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.05);
+  transition: all 0.2s;
+}
+
+.profile-link:hover {
+  background: rgba(255, 255, 255, 0.1);
+  transform: translateY(-2px);
+}
+
+.social-media-settings {
+  margin-top: 30px;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Make sure form elements are visible */
+.form-group input {
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.05);
+  color: var(--text-primary, #ffffff);
+}
+
+.btn-primary {
+  background-color: var(--accent, #8b5cf6);
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  margin-top: 15px;
+}
+
+.btn-primary:hover {
+  opacity: 0.9;
+}
+
+/* Add these styles to ensure settings sections are visible */
+.settings-section {
+  margin-bottom: 30px;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.settings-section h2 {
+  margin-bottom: 20px;
+  font-size: 1.8rem;
+  color: var(--text-primary);
+}
+
+.settings-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Make sure form elements are properly styled */
+.theme-settings select,
+.theme-settings input[type="range"],
+.theme-settings input[type="checkbox"],
+.theme-settings input[type="radio"] {
+  background-color: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: var(--text-primary);
+}
+
+/* Make sure the save button is prominent */
+.save-button {
+  margin-top: 20px;
+  padding: 12px 24px;
+  background-color: var(--accent);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.save-button:hover {
+  background-color: var(--accent-hover);
+  transform: translateY(-2px);
+}
+
+/* Add these styles for the Now Playing card */
+.now-playing-card {
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 8px;
+  padding: 12px;
+  margin-bottom: 12px;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+.now-playing-header {
+  margin-bottom: 8px;
+}
+
+.now-playing-content {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.now-playing-track-info {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.now-playing-art {
+  width: 80px;
+  height: 80px;
+  border-radius: calc(var(--presence-border-radius) / 3);
+  object-fit: cover;
+}
+
+.now-playing-details {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.now-playing-name {
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--primary-text-color) !important;
+  margin: 0;
+}
+
+.now-playing-artist {
+  font-size: 0.85rem;
+  color: var(--secondary-text-color) !important;
+  margin: 0;
+  margin-top: 2px;
+}
+
+.now-playing-album {
+  font-size: 0.75rem;
+  color: var(--tertiary-text-color) !important;
+  margin: 0;
+  margin-top: 1px;
+}
+
+@keyframes pulse {
+  0% { opacity: 0.6; }
+  50% { opacity: 1; }
+  100% { opacity: 0.6; }
+}
+
+/* Discord Integration Styles */
+.discord-connected {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.discord-profile {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 16px;
+  border-radius: 8px;
+}
+
+.discord-avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.discord-info {
+  flex: 1;
+}
+
+.discord-id {
+  font-size: 12px;
+  color: var(--text-secondary);
+  margin-top: 4px;
+}
+
+.btn-discord {
+  display: inline-block;
+  background-color: #5865F2;
+  color: white;
+  padding: 10px 16px;
+  border-radius: 8px;
+  font-weight: 500;
+  text-decoration: none;
+  transition: background-color 0.2s;
+}
+
+.btn-discord:hover {
+  background-color: #4752C4;
+  color: white;
+}
+
+.play-count-badge {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 11px;
+  color: var(--text-secondary);
+  margin-top: 1px;
+}
+
+.play-count-badge svg {
+  opacity: 0.7;
+}
+
+.not-playing-message {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+.now-playing-name {
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--primary-text-color) !important;
+  margin: 0;
+}
+
+/* When not playing, use these styles */
+.not-playing-message .now-playing-name {
+  font-size: 16px;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+/* Content Cards (Bio, LastFM, Discord, etc.) */
+.profile-card .glass-card,
+.music-section .glass-card,
+.discord-section .glass-card,
+.bio-section .glass-card {
+  background: rgba(45, 55, 72, var(--content-card-opacity));
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid var(--card-border);
+  border-radius: 16px;
+  padding: 24px;
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.2);
+}
+
+/* For custom cards (YouTube, GitHub, etc.) */
+.custom-card-title {
+  color: var(--primary-text-color) !important;
+}
+
+.custom-card-description {
+  color: var(--secondary-text-color) !important;
+}
+
+.custom-card-stats {
+  color: var(--secondary-text-color) !important;
+}
+
+/* Override cursor for interactive elements */
+a, button, input[type="submit"], input[type="button"], 
+[role="button"], [type="button"], [type="submit"] {
+  cursor: pointer !important;
+}
+
+/* Override cursor for text inputs */
+input[type="text"], input[type="password"], input[type="email"],
+input[type="number"], input[type="search"], input[type="tel"],
+input[type="url"], textarea {
+  cursor: text !important;
+}
+
+/* Override cursor for disabled elements */
+*:disabled {
+  cursor: not-allowed !important;
+}
+
+/* Override cursor for resize handles */
+.resize-handle {
+  cursor: se-resize !important;
+}
+
+/* Override cursor for draggable elements */
+[draggable="true"] {
+  cursor: move !important;
+}
+
+.select-input {
+  width: 100%;
+  padding: 8px 12px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--card-border);
+  border-radius: 8px;
+  color: var(--text-primary);
+  font-size: 14px;
+  transition: all 0.2s;
+  cursor: pointer;
+}
+
+.select-input:focus {
+  outline: none;
+  border-color: var(--accent);
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.select-input option {
+  background: #1f1f2c;
+  color: var(--text-primary);
+  padding: 8px;
+}
+
+.settings-group {
+  margin-bottom: 24px;
+}
+
+.settings-group label {
+  display: block;
+  margin-bottom: 8px;
+  color: var(--text-primary);
+  font-weight: 500;
+}
+
+.settings-layout {
+  display: flex;
+  min-height: 100vh;
+  background: #10b981;
+  width: 100%;
+  position: relative;
+}
+
+.settings-content {
+  flex: 1;
+  padding: 0;
+  margin-left: 250px;
+  width: calc(100% - 250px);
+  max-width: none;
+  box-sizing: border-box;
+  background: #121218;
+  min-height: 100vh;
+  position: relative;
+}
+
+.settings-section {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 32px;
+  background: #121218;
+  min-height: calc(100vh - 32px);
+  margin: 0;
+}

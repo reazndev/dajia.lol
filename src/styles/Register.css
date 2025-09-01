@@ -1,0 +1,307 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+.register-page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  font-family: 'Inter', sans-serif !important;
+  background: #0f0f1a;
+}
+
+.register-container {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 2rem;
+}
+
+.register-box {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  border-radius: 16px;
+  padding: 2.5rem;
+  width: 100%;
+  max-width: 900px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.register-content {
+  display: flex;
+  gap: 3rem;
+}
+
+.register-form-section {
+  flex: 1;
+  max-width: 450px;
+}
+
+.register-box h1 {
+  margin-bottom: 1rem;
+  font-size: 1.75rem;
+  font-weight: 600;
+  text-align: center;
+  color: #ffffff;
+}
+
+.register-form {
+  width: 100%;
+}
+
+.form-group {
+  margin-bottom: 1.25rem;
+  position: relative;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  color: #ffffff;
+  font-size: 0.9rem;
+}
+
+.username-input-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  transition: all 0.2s ease;
+  height: 45px;
+}
+
+.username-input-wrapper:focus-within {
+  border-color: #8b5cf6;
+  box-shadow: 0 0 0 2px rgba(139, 92, 246, 0.2);
+}
+
+.username-input-wrapper .input-icon {
+  position: static;
+  margin: 0;
+  padding: 0 0 0 1rem;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.username-input-wrapper .input-icon.at-symbol {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin: 0;
+  padding-right: 0;
+}
+
+.username-prefix {
+  padding-left: 0.5rem !important;
+  color: #9ca3af;
+  font-family: 'Inter', sans-serif;
+  font-size: 1rem;
+  user-select: none;
+  margin-bottom: -3px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+
+}
+
+/* Adjust the username input field to work with the prefix */
+#username {
+  border: none !important;
+  background: transparent !important;
+  padding: 0 1rem 0 0 !important;
+  flex: 1;
+  font-size: 1em;
+  height: 100%;
+  margin-top: 2px;
+}
+
+#username:focus {
+  outline: none;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+/* Remove the specific padding overrides for other inputs */
+#displayName, #email, #password {
+  padding-left: 2.5rem !important;
+  color: #ffffff !important;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 0.75rem 1rem 0.75rem 2.5rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.05);
+  color: #ffffff;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.95rem;
+  transition: all 0.2s ease;
+}
+
+.form-group input:focus {
+  outline: none;
+  border-color: #8b5cf6;
+  box-shadow: 0 0 0 2px rgba(139, 92, 246, 0.2);
+}
+
+.input-icon {
+  position: absolute;
+  left: 0.75rem;
+  margin-top: 51px;
+  color: #9ca3af;
+  font-size: 1.1rem;
+}
+
+.input-icon.at-symbol {
+  font-size: 1.2rem;
+  font-weight: bold;
+  top: 2.3rem;
+  margin-top: 8px;
+  margin-left: 0.75rem;
+}
+
+.register-button {
+  width: 100%;
+  padding: 0.75rem;
+  background: #8b5cf6;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-family: 'Inter', sans-serif;
+  margin-top: 0.5rem;
+}
+
+.register-button:hover {
+  background: #7c3aed;
+}
+
+.register-button:disabled {
+  background: #6b7280;
+  cursor: not-allowed;
+}
+
+.error-message {
+  background: rgba(239, 68, 68, 0.1);
+  border: 1px solid rgba(239, 68, 68, 0.2);
+  color: #ef4444;
+  padding: 0.75rem;
+  border-radius: 8px;
+  margin-bottom: 1.5rem;
+  font-size: 0.875rem;
+}
+
+.login-link {
+  text-align: center;
+  margin-top: 1.5rem;
+  color: #9ca3af;
+  font-size: 0.875rem;
+}
+
+.login-link a {
+  color: #8b5cf6;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.login-link a:hover {
+  text-decoration: underline;
+}
+
+.social-login-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 3rem;
+  border-left: 1px solid rgba(255, 255, 255, 0.1);
+  margin: 2rem 0;
+}
+
+.social-login-title {
+  color: #9ca3af;
+  font-size: 0.9rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.social-login-button {
+  width: 100%;
+  padding: 0.75rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-family: 'Inter', sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+  background: rgba(255, 255, 255, 0.05);
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  min-width: 250px;
+}
+
+.social-login-button:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.social-login-button.discord {
+  background: #5865F2;
+  border: none;
+}
+
+.social-login-button.discord:hover {
+  background: #4752c4;
+}
+
+.social-login-button.google {
+  background: #ffffff;
+  color: #000000;
+}
+
+.social-login-button.google:hover {
+  background: #f5f5f5;
+}
+
+.terms-checkbox {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+  margin: -0.5rem 0 1rem 0;
+}
+
+.terms-checkbox input[type="checkbox"] {
+  width: 1rem;
+  height: 1rem;
+  border-radius: 4px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.05);
+  cursor: pointer;
+  margin-top: 0.3rem;
+}
+
+.terms-checkbox label {
+  color: #9ca3af;
+  font-size: 0.875rem;
+  margin-top: 0.15rem;
+}
+
+.terms-checkbox a {
+  color: #8b5cf6;
+  text-decoration: none;
+}
+
+.terms-checkbox a:hover {
+  text-decoration: underline;
+} 

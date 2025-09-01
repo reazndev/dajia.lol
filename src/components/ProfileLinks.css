@@ -1,0 +1,12 @@
+/* Add these overrides */
+.profile-links {
+  margin: 0 !important;
+  padding: 0 !important;
+  line-height: 1 !important;
+}
+
+.profile-links a {
+  margin: 0 !important;
+  padding: 3px !important;
+  line-height: 1 !important;
+} 

@@ -1,0 +1,834 @@
+/* Reset all profile header related styles to minimal values */
+.profile-header {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 2px !important;
+  padding: 16px !important;
+  background: rgba(47, 49, 54, 0.3) !important;
+  border-radius: 16px !important;
+  margin: 0 !important;
+  backdrop-filter: blur(8px) !important;
+  -webkit-backdrop-filter: blur(8px) !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+}
+
+.profile-header * {
+  /* Family will be inherited from parent */
+}
+
+.profile-avatar {
+  width: 156px !important;
+  height: 156px !important;
+  border-radius: 50%;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.profile-username {
+  font-size: 24px;
+  font-weight: 600;
+  margin: 0 !important;
+  padding: 0 !important;
+  line-height: 1 !important;
+  color: var(--primary-text-color) !important;
+  /* Family will be inherited */
+}
+
+.profile-bio {
+  font-size: 14px;
+  color: var(--secondary-text-color) !important;
+  margin: -25px 0 0 0 !important;
+  padding: 0 !important;
+  line-height: 1.1 !important;
+  /* Family will be inherited */
+}
+
+.scrobble-count {
+  font-size: 14px;
+  color: var(--tertiary-text-color) !important;
+  margin: -10px !important;
+  padding: 0 !important;
+  line-height: 1 !important;
+  /* Family will be inherited */
+}
+
+.user-info h1,
+
+.user-stats p,
+.profile-header-container {
+  margin: 0;
+  padding: 0;
+}
+
+.profile-actions {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 10px;
+}
+
+.edit-profile-btn {
+  background-color: rgba(139, 92, 246, 0.7);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 8px 16px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-decoration: none;
+}
+
+.edit-profile-btn:hover {
+  background-color: rgba(139, 92, 246, 0.9);
+}
+
+/* Now Playing and Discord presence layout */
+.activity-section {
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+  margin: 15px 0;
+  align-items: flex-start;
+  position: relative;
+  width: 100%;
+}
+
+.activity-section::after {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.lastfm-now-playing {
+  flex: 1;
+}
+
+/* Discord presence container styles */
+.discord-presence-wrapper {
+  width: 300px;
+  flex-shrink: 0;
+}
+
+.discord-presence-container,
+.discord-presence-header,
+.discord-avatar,
+.discord-user-info,
+.discord-song-info,
+.discord-album-art,
+.discord-song-details,
+.discord-activity-title,
+.discord-activity-artist {
+  display: none;
+}
+
+/* Add specific style for the activity title */
+.discord-activity-name {
+  font-size: 13px !important;
+  font-weight: 400 !important;
+  color: #fff !important;
+  white-space: nowrap !important;
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
+}
+
+/* Create a new style for the Discord presence */
+.discord-presence-compact {
+  background: rgba(47, 49, 54, 0.95);
+  border-radius: 4px;
+  padding: 5px 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  display: flex;
+  align-items: center;
+  height: 40px;
+  box-sizing: border-box;
+  margin-top: 10px;
+  width: 300px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.discord-compact-avatar {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  margin-right: 8px;
+  flex-shrink: 0;
+  object-fit: cover;
+}
+
+.discord-compact-album {
+  width: 32px;
+  height: 32px;
+  border-radius: 3px;
+  margin-right: 8px;
+  flex-shrink: 0;
+  object-fit: cover;
+}
+
+.discord-compact-info {
+  flex: 1;
+  overflow: hidden;
+}
+
+.discord-compact-title {
+  font-size: 10px;
+  font-weight: 500;
+  margin: 0 0 3px 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: #fff;
+}
+
+.discord-compact-artist {
+  font-size: 9px;
+  line-height: 1.2;
+  margin: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: #b9bbbe;
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 768px) {
+  .activity-section {
+    flex-direction: column;
+  }
+  
+  .lastfm-now-playing,
+  .discord-presence-wrapper {
+    width: 100%;
+  }
+}
+
+/* Make sure both cards have similar dimensions */
+.now-playing-card {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.now-playing-card {
+  background: rgba(47, 49, 54, 0.3) !important;
+  border-radius: 16px !important;
+  padding: 16px !important;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(8px) !important;
+  -webkit-backdrop-filter: blur(8px) !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+}
+
+.now-playing-header {
+  margin-bottom: 12px;
+}
+
+.now-playing-badge {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #3ba55c;
+}
+
+.now-playing-content {
+  margin-top: 8px;
+}
+
+.now-playing-track-info {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.now-playing-art {
+  width: 60px;
+  height: 60px;
+  border-radius: 4px;
+  object-fit: cover;
+}
+
+.now-playing-details {
+  flex: 1;
+}
+
+.now-playing-name {
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--primary-text-color) !important;
+  margin: 0;
+}
+
+.now-playing-artist {
+  font-size: 0.85rem;
+  color: var(--secondary-text-color) !important;
+  margin: 0;
+  margin-top: 2px;
+}
+
+.now-playing-album {
+  font-size: 0.75rem;
+  color: var(--tertiary-text-color) !important;
+  margin: 0;
+  margin-top: 1px;
+}
+
+/* Discord presence card styles */
+.discord-presence-container {
+  background: rgba(47, 49, 54, 0.3) !important;
+  border-radius: 16px !important;
+  padding: 16px !important;
+  color: white;
+  width: 300px;
+  height: 46px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  margin-top: 0;
+  box-sizing: border-box;
+  overflow: hidden;
+  flex-direction: row;
+  backdrop-filter: blur(8px) !important;
+  -webkit-backdrop-filter: blur(8px) !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+}
+
+.discord-presence-header {
+  display: flex;
+  align-items: center;
+  margin-right: 6px;
+  min-width: 24px;
+  height: 24px;
+}
+
+.discord-avatar {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.discord-user-info {
+  display: none;
+}
+
+.discord-song-info {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 0;
+  flex: 1;
+  max-width: calc(100% - 30px);
+  height: 100%;
+}
+
+.discord-album-art {
+  width: 32px;
+  height: 32px;
+  border-radius: 3px;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.discord-song-details {
+  flex: 1;
+  min-width: 0;
+  overflow: hidden;
+  max-width: calc(100% - 45px);
+}
+
+.discord-activity-title {
+  font-size: 10px;
+  font-weight: 500;
+  line-height: 1.2;
+  margin: 0 0 3px 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: #fff;
+}
+
+.discord-activity-artist {
+  font-size: 9px;
+  line-height: 1.2;
+  margin: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: #b9bbbe;
+}
+
+.module-selector {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 16px 0;
+  padding: 16px !important;
+  background: rgba(47, 49, 54, 0.3) !important;
+  border-radius: 16px !important;
+  justify-content: center;
+  backdrop-filter: blur(8px) !important;
+  -webkit-backdrop-filter: blur(8px) !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+}
+
+.module-selector button {
+  background: rgba(59, 61, 66, 0.5);
+  color: #dcddde;
+  border: none;
+  border-radius: 20px;
+  padding: 8px 16px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.module-selector button:hover {
+  background: rgba(79, 81, 86, 0.7);
+}
+
+.module-selector button.active {
+  background: rgba(59, 61, 66, 0.5);
+}
+
+.track-item {
+  display: flex;
+  align-items: center;
+  padding: 12px;
+  gap: 12px;
+  border-radius: 12px;
+  background: rgba(32, 34, 37, 0.3);
+  margin-bottom: 8px;
+  transition: background 0.2s;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.track-item:hover {
+  background: rgba(47, 49, 54, 0.4);
+}
+
+.track-image {
+  width: 40px;
+  height: 40px;
+  border-radius: 4px;
+  object-fit: cover;
+}
+
+.rank-number {
+  min-width: 20px;
+  font-weight: 600;
+  color: #8e9297;
+  text-align: center;
+}
+
+.track-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.track-name {
+  font-size: 14px;
+  color: var(--primary-text-color) !important;
+  margin: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.track-artist {
+  font-size: 12px;
+  color: var(--secondary-text-color) !important;
+  margin: 4px 0 0;
+}
+
+.play-time, .play-count {
+  font-size: 12px;
+  color: var(--tertiary-text-color) !important;
+  margin: 2px 0 0;
+}
+
+@media (max-width: 768px) {
+  [style*="maxWidth: calc(50% - 10px)"] {
+    max-width: 100% !important;
+    margin-bottom: 15px;
+  }
+  
+  .now-playing-track-info {
+    flex-direction: column;
+  }
+  
+  .now-playing-art {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 10px;
+  }
+  
+  .now-playing-card {
+    padding: 12px;
+  }
+}
+
+[class*="profile-container"],
+[class*="profile-wrapper"],
+[class*="profile-section"] {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.profile-header p,
+.profile-header h1,
+.profile-header div {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.user-info {
+  display: flex;
+  gap: 16px !important;
+  align-items: flex-start;
+  padding: 0 !important;
+  margin: 0 !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+}
+
+.avatar {
+  width: 156px !important;
+  height: 156px !important;
+  border-radius: 50%;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.user-stats {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.user-stats h1 {
+  font-size: 24px;
+  font-weight: 600;
+  margin: 0 0 0 0 !important;
+  padding: 0 !important;
+  line-height: 1 !important;
+}
+
+.bio-container {
+  margin: 0 !important;
+  padding: 0 !important;
+  line-height: 1 !important;
+}
+
+.bio-container > * {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.scrobble-container {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.user-stats .bio-container {
+  margin: -25px 0 0 0 !important;
+  padding: 0 !important;
+  line-height: 1 !important;
+  display: block !important;
+}
+
+.user-stats .bio-container > * {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.user-stats .markdown-content {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.user-stats .markdown-content p {
+  margin: 0 !important;
+  padding: 0 !important;
+  line-height: 1.1 !important;
+  font-size: 14px;
+  color: #b9bbbe;
+}
+
+.user-stats .scrobble-container {
+  margin: -20px 0 0 0 !important;
+  padding: 0 !important;
+}
+
+.user-stats .scrobble-count {
+  margin: 0 !important;
+  padding: 0 !important;
+  line-height: 1 !important;
+}
+
+.user-stats .markdown-content > :first-child {
+  margin-top: 0 !important;
+  padding-top: 0 !important;
+}
+
+.user-stats .markdown-content > :last-child {
+  margin-bottom: 0 !important;
+  padding-bottom: 0 !important;
+}
+
+.user-stats .markdown-content * {
+  margin: 0 !important;
+  padding: 0 !important;
+  line-height: 1.1 !important;
+}
+
+.markdown-content h1,
+.markdown-content h2,
+.markdown-content h3,
+.markdown-content h4,
+.markdown-content h5,
+.markdown-content h6,
+.markdown-content p,
+.markdown-content ul,
+.markdown-content ol,
+.markdown-content pre,
+.markdown-content blockquote {
+  margin: 0 !important;
+  padding: 0 !important;
+  line-height: 1.1 !important;
+}
+
+/* New container for both types of links */
+.links-container {
+  display: flex !important;
+  gap: 2px !important;
+  margin: -15px 0 0 0 !important;
+  padding: 0 !important;
+  height: 24px !important;
+}
+
+
+.social-icon {
+  width: 15px !important;
+  height: 15px !important;
+  padding: 3px !important;
+  border-radius: 4px !important;
+  background: rgba(255, 255, 255, 0.05);
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  margin: 0 !important;
+}
+
+.profile-links {
+  margin: 0 !important;
+  padding: 0 !important;
+  display: flex;
+  gap: 4px !important;
+}
+
+.markdown-content {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.markdown-content p {
+  margin: 0 !important;
+  padding: 0 !important;
+  line-height: 1.1 !important;
+  font-size: 14px;
+  color: #b9bbbe;
+}
+
+.markdown-content > :first-child {
+  margin-top: 0 !important;
+  padding-top: 0 !important;
+}
+
+.markdown-content > :last-child {
+  margin-bottom: 0 !important;
+  padding-bottom: 0 !important;
+}
+
+.markdown-content * {
+  margin: 0 !important;
+  padding: 0 !important;
+  line-height: 1.1 !important;
+}
+
+.track-list .track-item .track-name {
+  font-size: 14px;
+  color: var(--primary-text-color) !important;
+  margin: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.track-list .track-item .track-artist {
+  font-size: 12px;
+  color: var(--secondary-text-color) !important;
+  margin: 4px 0 0;
+}
+
+.track-list .track-item .play-time,
+.track-list .track-item .play-count {
+  font-size: 12px;
+  color: var(--tertiary-text-color) !important;
+  margin: 2px 0 0;
+}
+
+.artist-name, .album-name {
+  font-weight: 600;
+  font-size: 14px;
+  margin-bottom: 2px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 100%;
+  color: var(--primary-text-color) !important;
+}
+
+.album-artist {
+  font-size: 12px;
+  margin-bottom: 2px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 100%;
+  color: var(--secondary-text-color) !important;
+}
+
+.play-count {
+  font-size: 11px;
+  color: var(--tertiary-text-color) !important;
+}
+
+.profile-page,
+.profile-overlay,
+.profile-container,
+.glass-card,
+.user-info,
+.bio-container,
+.links-container,
+.now-playing-card,
+.module-content,
+.track-list,
+.track-info,
+.artist-list,
+.artist-info,
+.album-list,
+.album-info,
+.custom-boxes-container,
+.custom-box {
+}
+
+[class*="module"],
+[class*="track"],
+[class*="artist"],
+[class*="album"],
+[class*="box"],
+[class*="info"],
+[class*="content"] {
+}
+
+.discord-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  margin-top: 4px;
+}
+
+.discord-badge {
+  display: flex;
+  align-items: center;
+  padding: 2px 6px;
+  background: rgba(47, 49, 54, 0.6);
+  border-radius: 4px;
+  font-size: 11px;
+  color: #fff;
+  gap: 4px;
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.discord-badge img {
+  width: 16px;
+  height: 16px;
+  object-fit: contain;
+}
+
+.discord-badge.nitro {
+  background: linear-gradient(45deg, rgba(88, 101, 242, 0.6), rgba(255, 115, 250, 0.6));
+}
+
+.discord-badge.hypesquad {
+  background: linear-gradient(45deg, rgba(156, 132, 239, 0.6), rgba(255, 129, 237, 0.6));
+}
+
+.discord-badge.staff {
+  background: linear-gradient(45deg, rgba(219, 171, 9, 0.6), rgba(244, 238, 255, 0.6));
+}
+
+.discord-badge.partner {
+  background: linear-gradient(45deg, rgba(67, 181, 129, 0.6), rgba(123, 216, 170, 0.6));
+}
+
+.discord-badge.bug-hunter {
+  background: linear-gradient(45deg, rgba(126, 97, 248, 0.6), rgba(168, 148, 255, 0.6));
+}
+
+.discord-badge.early-supporter {
+  background: linear-gradient(45deg, rgba(233, 30, 99, 0.6), rgba(255, 128, 171, 0.6));
+}
+
+.discord-badge.verified-developer {
+  background: linear-gradient(45deg, rgba(25, 145, 235, 0.6), rgba(114, 191, 255, 0.6));
+}
+
+@media (max-width: 768px) {
+  .discord-badges {
+    justify-content: center;
+  }
+  
+  .discord-badge {
+    font-size: 10px;
+    padding: 1px 4px;
+  }
+  
+  .discord-badge img {
+    width: 14px;
+    height: 14px;
+  }
+}
+
+.profile-page {
+  height: auto !important;
+  min-height: auto !important;
+}
+
+.profile-overlay {
+  height: auto !important;
+  min-height: auto !important;
+}
+
+.profile-container {
+  height: auto !important;
+  min-height: auto !important;
+}
+
+.glass-card {
+  height: auto !important;
+  min-height: auto !important;
+} 

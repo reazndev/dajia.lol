@@ -1,0 +1,52 @@
+.social-links {
+  display: flex;
+  gap: 10px;
+  margin: 10px 0;
+}
+
+.social-link {
+  display: inline-flex;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  padding: 8px 12px;
+  color: var(--text-primary);
+  text-decoration: none;
+  transition: all 0.2s ease;
+  width: fit-content;
+  white-space: nowrap;
+}
+
+.social-link:hover {
+  transform: translateY(-2px);
+  background: rgba(255, 255, 255, 0.1);
+  border-color: var(--accent-color);
+}
+
+.social-link .prefix {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-right: 6px;
+  color: var(--text-secondary);
+}
+
+.social-link .icon {
+  width: 16px;
+  height: 16px;
+  opacity: 0.8;
+}
+
+.social-link .username {
+  font-size: 0.95rem;
+  font-weight: 500;
+}
+
+.social-link.github:hover {
+  border-color: #2ea44f;
+}
+
+.social-link.discord:hover {
+  border-color: #5865F2;
+} 

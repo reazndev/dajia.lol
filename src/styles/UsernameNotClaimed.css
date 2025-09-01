@@ -1,0 +1,314 @@
+.username-not-claimed {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 80vh;
+  padding: 2.5rem;
+  text-align: center;
+  background-color: rgba(15, 15, 25, 0.8);
+  border-radius: 16px;
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+  max-width: 650px;
+  margin: 2rem auto;
+  animation: fadeIn 0.5s ease-out;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  overflow: hidden;
+  position: relative;
+  font-family: 'Inter', sans-serif !important;
+}
+
+.username-not-claimed::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(
+    circle at center,
+    rgba(139, 92, 246, 0.1) 0%,
+    rgba(0, 0, 0, 0) 70%
+  );
+  z-index: -1;
+}
+
+.username-badge {
+  display: inline-block;
+  padding: 0.5rem 1.25rem;
+  background: linear-gradient(135deg, #8b5cf6 0%, #6d28d9 100%);
+  color: white;
+  border-radius: 999px;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 0 15px rgba(139, 92, 246, 0.5);
+  animation: pulse 2s infinite;
+  letter-spacing: 0.5px;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.username-badge::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.2),
+    transparent
+  );
+  transition: 0.5s;
+  z-index: -1;
+  animation: shine 3s infinite;
+}
+
+@keyframes shine {
+  0% {
+    left: -100%;
+  }
+  20% {
+    left: 100%;
+  }
+  100% {
+    left: 100%;
+  }
+}
+
+.avatar-placeholder {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background-color: #8b5cf6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 2rem;
+  box-shadow: 0 0 20px rgba(139, 92, 246, 0.5);
+  transition: transform 0.3s ease;
+}
+
+.avatar-placeholder:hover {
+  transform: scale(1.05);
+}
+
+.claim-button {
+  padding: 0.9rem 2rem;
+  font-size: 1.2rem;
+  font-weight: 600;
+  background: linear-gradient(135deg, #8b5cf6 0%, #6d28d9 100%);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 4px 12px rgba(139, 92, 246, 0.4);
+}
+
+.claim-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(139, 92, 246, 0.5);
+}
+
+.claim-button:active {
+  transform: translateY(1px);
+  box-shadow: 0 2px 8px rgba(139, 92, 246, 0.3);
+}
+
+.username-heading {
+  font-size: 2.8rem;
+  margin-bottom: 1rem;
+  color: #fff;
+  font-weight: 700;
+  text-shadow: 0 2px 10px rgba(139, 92, 246, 0.4);
+}
+
+.page-subtitle {
+  font-size: 2rem;
+  margin-bottom: 1.2rem;
+  color: #fff;
+  font-weight: 600;
+}
+
+.description-text {
+  font-size: 1.2rem;
+  margin-bottom: 2.5rem;
+  color: #b9bbbe;
+  max-width: 450px;
+  line-height: 1.6;
+}
+
+.disclaimer-text {
+  font-size: 0.9rem;
+  color: #888a8e;
+  max-width: 450px;
+  line-height: 1.4;
+}
+
+.home-link {
+  margin-top: 2.5rem;
+  color: #8b5cf6;
+  text-decoration: none;
+  font-size: 1.1rem;
+  font-weight: 500;
+  transition: color 0.2s;
+  display: inline-flex;
+  align-items: center;
+}
+
+.home-link:hover {
+  color: #a78bfa;
+}
+
+.home-link svg {
+  margin-right: 0.5rem;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(139, 92, 246, 0.7);
+  }
+  70% {
+    box-shadow: 0 0 0 10px rgba(139, 92, 246, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(139, 92, 246, 0);
+  }
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 768px) {
+  .username-not-claimed {
+    max-width: 90%;
+    padding: 2rem 1.5rem;
+    margin: 1rem auto;
+  }
+  
+  .username-heading {
+    font-size: 2.2rem;
+  }
+  
+  .page-subtitle {
+    font-size: 1.6rem;
+  }
+  
+  .description-text {
+    font-size: 1.1rem;
+    max-width: 90%;
+  }
+  
+  .disclaimer-text {
+    max-width: 90%;
+  }
+}
+
+@media (max-width: 480px) {
+  .username-not-claimed {
+    padding: 1.5rem 1rem;
+  }
+  
+  .username-heading {
+    font-size: 1.8rem;
+  }
+  
+  .page-subtitle {
+    font-size: 1.4rem;
+  }
+  
+  .description-text {
+    font-size: 1rem;
+  }
+  
+  .claim-button {
+    padding: 0.8rem 1.6rem;
+    font-size: 1.1rem;
+  }
+  
+  .avatar-placeholder {
+    width: 80px;
+    height: 80px;
+  }
+}
+
+.unclaimed-page-container {
+  position: relative;
+  overflow: hidden;
+}
+
+.unclaimed-page-container::before,
+.unclaimed-page-container::after {
+  content: '';
+  position: absolute;
+  width: 3px;
+  height: 3px;
+  border-radius: 50%;
+  background: white;
+  animation: float 15s infinite linear;
+  opacity: 0.4;
+}
+
+.unclaimed-page-container::before {
+  top: 20%;
+  left: 20%;
+  box-shadow: 
+    100px 70px 0 0 rgba(255, 255, 255, 0.2),
+    160px 160px 0 0 rgba(255, 255, 255, 0.3),
+    200px 120px 0 0 rgba(255, 255, 255, 0.1),
+    320px 210px 0 0 rgba(255, 255, 255, 0.3),
+    380px 40px 0 0 rgba(255, 255, 255, 0.2),
+    450px 150px 0 0 rgba(255, 255, 255, 0.2),
+    520px 100px 0 0 rgba(255, 255, 255, 0.3),
+    600px 250px 0 0 rgba(255, 255, 255, 0.1),
+    660px 120px 0 0 rgba(255, 255, 255, 0.2),
+    720px 190px 0 0 rgba(255, 255, 255, 0.2),
+    780px 60px 0 0 rgba(255, 255, 255, 0.3),
+    850px 150px 0 0 rgba(255, 255, 255, 0.1);
+}
+
+.unclaimed-page-container::after {
+  top: 60%;
+  left: 30%;
+  box-shadow: 
+    120px -90px 0 0 rgba(255, 255, 255, 0.2),
+    180px -40px 0 0 rgba(255, 255, 255, 0.1),
+    250px -140px 0 0 rgba(255, 255, 255, 0.3),
+    300px -60px 0 0 rgba(255, 255, 255, 0.2),
+    350px -180px 0 0 rgba(255, 255, 255, 0.2),
+    400px -110px 0 0 rgba(255, 255, 255, 0.1),
+    480px -40px 0 0 rgba(255, 255, 255, 0.3),
+    550px -150px 0 0 rgba(255, 255, 255, 0.2),
+    630px -80px 0 0 rgba(255, 255, 255, 0.2),
+    700px -180px 0 0 rgba(255, 255, 255, 0.3),
+    780px -50px 0 0 rgba(255, 255, 255, 0.1);
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-20px) rotate(180deg);
+  }
+  100% {
+    transform: translateY(0) rotate(360deg);
+  }
+} 
