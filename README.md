@@ -50,9 +50,8 @@ Here are some creative profiles built with Dajia.lol:
 | ![reazn](https://github.com/user-attachments/assets/6d10c122-d56a-40e0-bd16-c252706dbb68) | ![milan](https://github.com/user-attachments/assets/1c83ad20-1b17-41ba-9e2a-f415ab442382) |
 | [@pivex](https://dajia.lol/pivex) | [@reazn](https://dajia.lol/reazn) |
 | ![pivex](https://github.com/user-attachments/assets/998395eb-04bd-4891-88e4-892edbd49a73) | ![reazn](https://github.com/user-attachments/assets/0fda86a5-bf25-40f6-bef2-573e6a8ed2cb) |
-| [@kamikaze](https://dajia.lol/kmkz) | [@wh01sme](https://dajia.lol/wh01sme) |
-| ![kamikaze](https://github.com/user-attachments/assets/5d76d7bf-6902-43b3-a9e2-0b96607ba7e3) | ![wh01sme](https://github.com/user-attachments/assets/f6a8ae63-3e6d-4182-86b7-112d81f7e9cf) |
-
+| [@kamikaze](https://dajia.lol/kmkz) | [@pianonic](https://dajia.lol/pianonic) |
+| ![kamikaze](https://github.com/user-attachments/assets/5d76d7bf-6902-43b3-a9e2-0b96607ba7e3) | ![pianonic](https://github.com/user-attachments/assets/4ce60de4-aa7f-48e8-ba52-252593c44c93) |
 
 > Want to be featured? [DM us on Discord](https://discord.gg/dhNXtEabMZ) or email contact@dajia.lol!
 
