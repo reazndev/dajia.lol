@@ -47,11 +47,13 @@ Here are some creative profiles built with Dajia.lol:
 
 | [@reazn](https://dajia.lol/reazn) | [@milan](https://dajia.lol/milan) |
 |:---------------------------------|:--------------------------------|
-| ![reazn](https://github.com/user-attachments/assets/6d10c122-d56a-40e0-bd16-c252706dbb68) | ![milan](https://github.com/user-attachments/assets/1c83ad20-1b17-41ba-9e2a-f415ab442382) |
-| [@pivex](https://dajia.lol/pivex) | [@reazn](https://dajia.lol/reazn) |
-| ![pivex](https://github.com/user-attachments/assets/998395eb-04bd-4891-88e4-892edbd49a73) | ![reazn](https://github.com/user-attachments/assets/0fda86a5-bf25-40f6-bef2-573e6a8ed2cb) |
-| [@kamikaze](https://dajia.lol/kmkz) | [@pianonic](https://dajia.lol/pianonic) |
-| ![kamikaze](https://github.com/user-attachments/assets/5d76d7bf-6902-43b3-a9e2-0b96607ba7e3) | ![pianonic](https://github.com/user-attachments/assets/4ce60de4-aa7f-48e8-ba52-252593c44c93) |
+| ![reazn](https://github.com/user-attachments/assets/abf322b5-b233-4528-9a15-858d2fef1898) | ![milan](https://github.com/user-attachments/assets/10b80f66-874f-49b9-b667-6f71dd076517) |
+| [@pianonic](https://dajia.lol/pianonic) | [@reazn](https://dajia.lol/reazn) |
+| ![pianonic](https://github.com/user-attachments/assets/4ce60de4-aa7f-48e8-ba52-252593c44c93) | ![reazn](https://github.com/user-attachments/assets/74b00fba-6398-4ce8-8bf0-ae611dd2787b) |
+| [@kamikaze](https://dajia.lol/kmkz) | [@pivex](https://dajia.lol/pivex) |
+| ![kamikaze](https://github.com/user-attachments/assets/f7667acb-b294-478a-b8b8-42d0a247401e) | ![pivex](https://github.com/user-attachments/assets/9e1540a1-89f1-4b4f-838e-7e213f790cb5) |
+
+
 
 > Want to be featured? [DM us on Discord](https://discord.gg/dhNXtEabMZ) or email contact@dajia.lol!
 
