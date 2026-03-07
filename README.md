@@ -37,7 +37,6 @@
 - **🔗 All Your Links, One Page**: Add as many links as you want to your socials, websites, and more
 - **🎨 Customization**: Change backgrounds, colors, fonts, add special effects, custom boxes, and unique cursors
 - **🏅 Badges & Achievements**: Unlock badges for being an early supporter, verified user, Discord booster, and more
-- **🔒 Privacy-First**: You're in control—choose what you want to share
 
 ---
 
@@ -80,7 +79,7 @@ Here are some creative profiles built with Dajia.lol:
 
 ## 📄 License
 
-MIT License. See the [LICENSE](LICENSE) file for details.
+GNU License. See the [LICENSE](LICENSE) file for details.
 
 ---
 
